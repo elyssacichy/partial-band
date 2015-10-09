@@ -34,6 +34,22 @@ $(function() {
       });
     }
 
+    if (verb) {
+      verbPost = {word: verb};
+      $.post("verb", verbPost, function(response) {
+        var verbRes = response.msg;
+        $("#verbRes").text(verbRes);
+      });
+    }
+
+    if (noun) {
+      nounPost = {word: noun};
+      $.post("noun", nounPost, function(response) {
+        var nounRes = response.msg;
+        $("#nounRes").text(nounRes);
+      });
+    }
+
   });
 
 });
