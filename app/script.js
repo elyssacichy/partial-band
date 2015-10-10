@@ -4,7 +4,7 @@ $(function() {
 
   $("#name").click(function() {
     $.get('adjective', function(response) {
-      var adjective = response.word;
+      var adjective = response.word.innerHTML;
       $("#adjective").text(adjective);
     });
 
