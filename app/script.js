@@ -21,7 +21,7 @@ $(function() {
     });
 
     $("#saveName").click(function( {
-      $("#bandNames").text(currentBandName + ', ');
+      $("#bandNames").text(currentBandName);
         });
     });
 
