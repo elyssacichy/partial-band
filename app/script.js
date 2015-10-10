@@ -17,6 +17,11 @@ $(function() {
       var noun = response.word;
       $("#noun").text(noun);
     });
+
+    $.get('quote', function(response) {
+      var quote = response.word;
+      $("#quote").text(quote);
+    });
   });
 
   $("#submitWords").on("submit", function(e) {

@@ -8,6 +8,7 @@ var port = process.env.PORT || 3000;
 var Adjective = require('./lib/adjective.js');
 var Verb = require('./lib/verb.js');
 var Noun = require('./lib/noun.js');
+var Qoute = require('./lib/quotes.js');
 var getRandomWord = require('./lib/getRandomWord.js');
 var postWord = require('./lib/postWord.js');
 
@@ -16,6 +17,8 @@ var adjective = new Adjective();
 var verb = new Verb();
 
 var noun = new Noun();
+
+var quote = new Quote();
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({
@@ -36,6 +39,10 @@ app.get('/verb', function(req, res) {
 
 app.get('/noun', function(req, res) {
   res.json(getRandomWord(noun));
+});
+
+app.get('/quote', function(req, res) {
+  res.json(getRandomWord(quote));
 });
 
 app.post('/adjective', function(req, res) {
