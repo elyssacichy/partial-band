@@ -18,6 +18,11 @@ $(function() {
       $("#noun").text(noun);
     });
 
+    var bandName = adjective + ' ' + verb + ' ' + noun;
+
+    $("#saveName").click(function() {
+      $("#bandNames").append('<li>' + bandName + '</li>');
+    })
   });
 
   $("#submitWords").on("submit", function(e) {
