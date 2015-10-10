@@ -20,7 +20,7 @@ $(function() {
 
     console.log(verb.val);
     console.log(noun);
-    console.log(adjective.text());
+    console.log(adjective.text);
 
 
     var currentBandName = adjective.innerHTML + ' ' + verb + ' ' + noun;
