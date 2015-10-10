@@ -2,7 +2,7 @@
 
 $(function() {
 
-  $("button").click(function() {
+  $("#name").click(function() {
     $.get('adjective', function(response) {
       var adjective = response.word;
       $("#adjective").text(adjective);
@@ -16,14 +16,24 @@ $(function() {
     $.get('noun', function(response) {
       var noun = response.word;
       $("#noun").text(noun);
+
+    var currentBandName = adjective + ' ' + verb + ' ' + noun;
     });
 
-    var bandName = adjective + ' ' + verb + ' ' + noun;
+    $("#saveName").click(function( {
+      $("#bandNames").text(currentBandName + ', ');
+        });
+    });
 
-    $("#saveName").click(function() {
-      $("#bandNames").append('<li>' + bandName + '</li>');
-    })
+    // $("#saveName").on('click', (function(e) {
+    //   e.preventDefault();
+
+    //   $.get('bandName' function() {
+    //   $("#bandNames").append('<li>' + bandName + '</li>');
+    //   })
+    // })
   });
+
 
   $("#submitWords").on("submit", function(e) {
     e.preventDefault();

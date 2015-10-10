@@ -9,6 +9,7 @@ var Verb = require('./lib/verb.js');
 var Noun = require('./lib/noun.js');
 var getRandomWord = require('./lib/getRandomWord.js');
 var postWord = require('./lib/postWord.js');
+var saveName = require('./lib/saveBandName.js');
 
 var adjective = new Adjective();
 
