@@ -1,9 +1,10 @@
 'use strict';
 
 $(function() {
-  var adjective,
-      verb,
-      noun;
+  var adjective = '',
+      verb = '',
+      noun = '';
+
   $("#name").click(function() {
     $.get('adjective', function(response) {
       adjective = response.word;
@@ -19,12 +20,12 @@ $(function() {
       noun = response.word;
       $("#noun").text(noun);
     });
+  });
 
-    var currentBandName = adjective + ' ' + verb + ' ' + noun;
+  var currentBandName = adjective + ' ' + verb + ' ' + noun;
 
-    $("#saveName").click(function() {
-      $("#bandNames").text(currentBandName + ', ');
-    });
+  $("#saveName").click(function() {
+    $("#bandNames").text(currentBandName + ', ');
   });
 
 
