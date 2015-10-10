@@ -8,7 +8,7 @@ var port = process.env.PORT || 3000;
 var Adjective = require('./lib/adjective.js');
 var Verb = require('./lib/verb.js');
 var Noun = require('./lib/noun.js');
-var Qoute = require('./lib/quotes.js');
+var Quote = require('./lib/quotes.js');
 var getRandomWord = require('./lib/getRandomWord.js');
 var postWord = require('./lib/postWord.js');
 
