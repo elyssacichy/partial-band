@@ -32,6 +32,12 @@ $(function() {
     var adjective = $("input[name=adjective]").val();
     var adjPost;
 
+    var verb = $("input[name=verb]").val();
+    var verbPost;
+
+    var noun = $("input[name=noun]").val();
+    var nounPost;
+
     if (adjective) {
       adjPost = {word: adjective};
       $.post("adjective", adjPost, function(response) {
