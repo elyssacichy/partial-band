@@ -4,7 +4,7 @@ $(function() {
 
   $("#name").click(function() {
     $.get('adjective', function(response) {
-      var adjective = response.word.innerHTML;
+      var adjective = response.word;
       $("#adjective").text(adjective);
     });
 
@@ -18,11 +18,16 @@ $(function() {
       $("#noun").text(noun);
     });
 
-    var currentBandName = adjective + ' ' + verb + ' ' + noun;
+    console.log(verb.val);
+    console.log(noun);
+    console.log(.text(adjective));
+
+
+    var currentBandName = adjective.innerHTML + ' ' + verb + ' ' + noun;
 
     $("#saveName").click(function() {
       $("#bandNames").text(currentBandName + ', ');
-        });
+    });
   });
 
 
