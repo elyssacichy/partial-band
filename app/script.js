@@ -1,29 +1,26 @@
 'use strict';
 
 $(function() {
-
+  var adjective,
+      verb,
+      noun;
   $("#name").click(function() {
     $.get('adjective', function(response) {
-      var adjective = response.word;
+      adjective = response.word;
       $("#adjective").text(adjective);
     });
 
     $.get('verb', function(response) {
-      var verb = response.word;
+      verb = response.word;
       $("#verb").text(verb);
     });
 
     $.get('noun', function(response) {
-      var noun = response.word;
+      noun = response.word;
       $("#noun").text(noun);
     });
 
-    console.log(verb.val);
-    console.log(noun);
-    console.log(adjective.text);
-
-
-    var currentBandName = adjective.innerHTML + ' ' + verb + ' ' + noun;
+    var currentBandName = adjective + ' ' + verb + ' ' + noun;
 
     $("#saveName").click(function() {
       $("#bandNames").text(currentBandName + ', ');
