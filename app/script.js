@@ -26,22 +26,6 @@ $(function() {
     });
   });
 
-  // var currentBandName = adjective + ' ' + verb + ' ' + noun;
-
-  $("#saveName").click(function() {
-    $("#bandNames").text(currentBandName);
-  });
-
-
-    // $("#saveName").on('click', (function(e) {
-    //   e.preventDefault();
-
-    //   $.get('bandName' function() {
-    //   $("#bandNames").append('<li>' + bandName + '</li>');
-    //   })
-    // })
-
-
   $("#submitWords").on("submit", function(e) {
     e.preventDefault();
 
