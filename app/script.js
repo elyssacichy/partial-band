@@ -20,8 +20,8 @@ $(function() {
     var currentBandName = adjective + ' ' + verb + ' ' + noun;
     });
 
-    $("#saveName").click(function( {
-      $("#bandNames").text(currentBandName);
+    $("#saveName").click(function() {
+      $("#bandNames").text(currentBandName + ', ');
         });
     });
 
