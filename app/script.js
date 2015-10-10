@@ -3,29 +3,33 @@
 $(function() {
   var adjective = '',
       verb = '',
-      noun = '';
+      noun = '',
+      currentBandName;
 
   $("#name").click(function() {
     $.get('adjective', function(response) {
       adjective = response.word;
+      currentBandName = adjective + ' ' + verb + ' ' + noun;
       $("#adjective").text(adjective);
     });
 
     $.get('verb', function(response) {
       verb = response.word;
+      currentBandName = adjective + ' ' + verb + ' ' + noun;
       $("#verb").text(verb);
     });
 
     $.get('noun', function(response) {
       noun = response.word;
+      currentBandName = adjective + ' ' + verb + ' ' + noun;
       $("#noun").text(noun);
     });
   });
 
-  var currentBandName = adjective + ' ' + verb + ' ' + noun;
+  // var currentBandName = adjective + ' ' + verb + ' ' + noun;
 
   $("#saveName").click(function() {
-    $("#bandNames").text(currentBandName + ', ');
+    $("#bandNames").text(currentBandName);
   });
 
 
