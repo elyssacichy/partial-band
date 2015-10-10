@@ -22,12 +22,10 @@ var quote = new Quote();
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({
-  extended: true
+  extended: true,
 }));
 
 app.use(express.static(__dirname + '/app/'));
-
-
 
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
