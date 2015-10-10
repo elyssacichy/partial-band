@@ -19,12 +19,12 @@ $(function() {
     });
 
     var currentBandName = adjective + ' ' + verb + ' ' + noun;
-    return currentBandName;
+
+    $("#saveName").click(function() {
+      $("#bandNames").text(currentBandName + ', ');
+        });
   });
 
-  $("#saveName").click(function() {
-    $("#bandNames").text(currentBandName + ', ');
-      });
 
     // $("#saveName").on('click', (function(e) {
     //   e.preventDefault();
