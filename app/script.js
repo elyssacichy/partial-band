@@ -36,7 +36,6 @@ $(function() {
     //   $("#bandNames").append('<li>' + bandName + '</li>');
     //   })
     // })
-  });
 
 
   $("#submitWords").on("submit", function(e) {
@@ -68,5 +67,5 @@ $(function() {
         $("#nounRes").text(nounRes);
       });
     }
-
+  });
 });
